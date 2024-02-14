@@ -1,4 +1,6 @@
-window.addEventListener("load", (event) => {
+window.location.replace("#welcome");
+
+/*window.addEventListener("load", (event) => {
     const gallery = document.querySelector("#Gallery > div > div").querySelectorAll("img")
 
     gallery.forEach(image => {
@@ -8,4 +10,4 @@ window.addEventListener("load", (event) => {
             image.src = path.join('/');
         }
     });
-});
+});*/

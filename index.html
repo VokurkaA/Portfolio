@@ -58,8 +58,16 @@
     <title>Portfolio</title>
 </head>
 
-<body class="bg-background h-screen w-full text-text font-normal cursor-default">
-    <div id="Start" class="h-screen w-full grid grid-cols-2 grid-rows-1">
+<body class="bg-background h-screen w-full text-text font-normal cursor-default select-none scroll-smooth">
+    <header class="hidden text-center w-full justify-center pt-4 gap-2 font-semibold lg:flex md:flex">
+        <a class="w-28 p-1 rounded-lg" href="#welcome">Welcome</a>
+        <a class="w-28 p-1 rounded-lg" href="#about">About me</a>
+        <a class="w-28 p-1 rounded-lg" href="#student">Student</a>
+        <a class="w-28 p-1 rounded-lg" href="#programmer">Programmer</a>
+        <a class="w-28 p-1 rounded-lg" href="#graphic">Graphic</a>
+        <a class="w-28 p-1 rounded-lg" href="#gallery">Gallery</a>
+    </header>
+    <div id="welcome" class="h-screen w-full grid grid-cols-2 grid-rows-1">
         <div class="self-center justify-self-center">
             <h1 class="text-5xl font-bold">Hello</h1>
             <h2 class="text-3xl font-semibold"> <span
@@ -67,11 +75,12 @@
                 to my Portfolio</h2>
         </div>
     </div>
-    <div id="About" class="bg-secondary h-screen w-full text-base flex flex-col">
-        <h2 class="text-3xl folt-semibold text-right right-1/3 top-1/4 relative">About me</h2>
+    <div id="about" class="bg-secondary h-screen w-full text-base flex flex-col">
+        <h2 class="text-3xl font-semibold text-right right-1/3 top-1/4 relative">About me</h2>
         <div class="flex flex-wrap flex-row relative top-1/3">
             <div class="flex flex-wrap flex-col gap-4 m-8 max-w-5xl md:ml-40 lg:ml-96">
-                <p>Hi, my name is Jan Zadrobílek, and Iam a student from Pardubice, Czech republic at high school Delta.</p>
+                <p>Hi, my name is Jan Zadrobílek, and Iam a student from Pardubice, Czech republic at high school Delta.
+                </p>
                 <p>I'm all about learning and pushing boundaries. Whether that's starting another project, even though i
                     have tens of others or creating some visuals, I'm always up for the the challenge.</p>
                 <p>So feel free to explore my portfolio.</p>
@@ -79,21 +88,36 @@
             </div>
         </div>
     </div>
-    <div id="Gallery" class="w-full min-h-full">
-        <h1 class="font-semibold text-3xl text-center mt-16">Projects?</h1>
+    <div id="student" class="bg-background h-screen w-full text-base">
+        <h2>Student</h2>
+        <p>I'm currently in my second year at <a href="https://www.delta-skola.cz/">Delta</a>, computer graphics and
+            programming school, with two more years ahead of me.</p>
+        <p>Here I am learning digital photography in both theory and with real life experiences, and graphics design in
+            all sorts of mostly <a href="https://www.adobe.com/">Adobe</a> products including, but not limited to
+            <b><a href="https://adobe.com/illustrator">illustrator</a></b>,
+            <b><a href="https://adobe.com/photoshop">photoshop</a></b> and
+            <b><a href="https://adobe.com/indesign">indesigh</a></b>
+        </p>
+    </div>
+    <div id="programmer" class="bg-secondary h-screen w-full text-base">
+
+    </div>
+    <div id="gallery" class="w-full min-h-full">
+        <h1 class="font-semibold text-3xl text-center mt-16">Photos?</h1>
         <div class="flex justify-center items-center">
-            <div class="grid grid-cols-1 grid-rows-auto gap-6 w-4/5 grid-flow-row-dense my-24 md:grid-cols-2 lg:grid-cols-3">
+            <div
+                class="grid grid-cols-1 grid-rows-auto gap-6 w-4/5 grid-flow-row-dense my-24 md:grid-cols-2 lg:grid-cols-3">
                 <img class="row-span-6 object-cover bg-[#8a897b]" src="img/compressed/img_1.webp">
                 <img class="row-span-3 object-cover bg-[#938682]" src="img/compressed/img_2.webp">
                 <img class="row-span-8 object-cover bg-[#6f7987]" src="img/compressed/img_3.webp">
-                <img class="row-span-5 object-cover col-start-1 bg-[#897752]" src="img/compressed/img_4.webp">
+                <img class="row-span-5 object-cover bg-[#897752] lg:col-start-1" src="img/compressed/img_4.webp">
                 <img class="row-span-8 object-cover bg-[#a4abb0]" src="img/compressed/img_5.webp">
                 <img class="row-span-3 object-cover bg-[#73715b]" src="img/compressed/img_6.webp">
             </div>
         </div>
     </div>
 
-    <footer id="Footer" class="bg-secondary w-full mt-16 p-8 flex grow justify-center">
+    <footer id="footer" class="bg-secondary w-full mt-16 p-8 flex grow justify-center">
 
         <div class="flex flex-wrap justify-center flex-row content-center gap-16 m-16">
             <div class="flex flex-col self-top">
@@ -105,9 +129,9 @@
                     <div class="w-0.5 bg-gradient-to-b from-accent to-transparent mx-2"></div>
                     <div class="flex flex-col">
                         <a href="https://www.facebook.com/">Facebook</a>
-                        <a href="https://www.instagram.com/">Instagram</a>
+                        <a href="https://www.instagram.com/j.zadrobilek/">Instagram</a>
                         <a href="https://www.twitter.com/">Twitter</a>
-                        <a href="https://www.gmail.com/">Email</a>
+                        <a href="https://mail.google.com/mail/?fs=1&to=zadrobilek.jan@seznam.cz&tf=cm">Email</a>
                         <button onclick="navigator.clipboard.writeText('+420 123 456 789')">Telephone</button>
                     </div>
                 </div>
@@ -137,10 +161,10 @@
                 <div class="flex flex-row">
                     <div class="w-0.5 bg-gradient-to-b from-accent to-transparent mx-2"></div>
                     <div class="flex flex-col">
-                        <a href="#Start">Start</a>
-                        <a href="#About">About</a>
-                        <a href="#Gallery">Gallery</a>
-                        <a href="#Footer">Footer</a>
+                        <a href="#welcome">Welcome</a>
+                        <a href="#about">About me</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#footer">Footer</a>
                     </div>
                 </div>
             </div>
