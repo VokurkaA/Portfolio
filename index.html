@@ -31,8 +31,9 @@
                         'text': '#0f0e0a',
                         'background': '#f2efe9',
                         'primary': '#54472c',
+                        'primary50': '#dcd2bc',
                         'secondary': '#cdbb98',
-                        'secondary50': '#ebe4d8',
+                        'secondary50': '#cdbb9833',
                         'accent': '#af8f4b',
                     },
                     fontSize: {
@@ -62,13 +63,16 @@
     <title>Portfolio</title>
 </head>
 
-<body class="bg-background h-screen w-full text-text text-base font-normal cursor-default select-none scroll-smooth">
+<body class="bg-background text-text text-base font-normal cursor-default select-none scroll-smooth">
     <header class="hidden text-center w-full justify-center pt-4 gap-2 font-semibold lg:flex md:flex">
         <a class="w-28 p-1 rounded-lg" href="#welcome">Welcome</a>
         <a class="w-28 p-1 rounded-lg" href="#about">About me</a>
         <a class="w-28 p-1 rounded-lg" href="#student">Student</a>
+        <a class="w-28 p-1 rounded-lg" href="#programmer">Programmer</a>
+        <a class="w-28 p-1 rounded-lg" href="#graphic">Graphic</a>
         <a class="w-28 p-1 rounded-lg" href="#gallery">Gallery</a>
     </header>
+
     <div id="welcome" class="min-h-svh w-full grid grid-cols-2 grid-rows-1">
         <div class="self-center justify-self-center ml-24 lg:ml-0">
             <h1 class="text-5xl font-bold">Hello</h1>
@@ -77,125 +81,180 @@
                 to my Portfolio</h2>
         </div>
     </div>
-    <div id="about" class="bg-secondary50 h-5/6 w-11/12 p-16 mx-auto rounded-3xl">
-        <div class="max-w-xl md:max-w-3xl md:pl-48 lg:max-w-5xl lg:pl-64">
-            <h2 class="text-3xl font-semibold mx-16 my-8">About me</h2>
-            <div class="leading-snug tracking-wide">
-                <p class="m-2">Hi, my name is Jan Zadrobílek, and Iam a student from Pardubice, Czech republic at high
-                    school Delta.
-                </p>
-                <p class="m-2">I'm all about learning new things and pushing boundaries. Whether that's starting yet
-                    another project or creating some visuals, I'm always up for the the challenge.</p>
-                <p class="m-2">So feel free to explore my portfolio.</p>
-                <p class="m-2">If you have any additional questions, or feedback, please
-                    <a href="#footer">contact me</a>.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="student" class="min-h-svh w-full p-8 pt-32">
-        <div class="max-w-xl p-8 md:max-w-3xl md:pl-48 lg:max-w-5xl lg:pl-64">
-            <h2 class="text-3xl font-semibold mx-16 my-4">Student</h2>
-            <div class="leading-snug tracking-wide">
-                <p class="m-2">I'm currently in my second year at <a href="https://www.delta-skola.cz/">Delta</a>,
-                    Computer Graphics
-                    and
-                    Programming School, with two more years ahead of me.</p>
-                <p class="m-2">Here, I am learning digital photography in both theory and with real-life experiences,
-                    graphics design in all sorts of mostly
-                    <a href="https://www.adobe.com/">Adobe</a> products, including but not limited to
-                    <b><a href="https://adobe.com/illustrator">Illustrator</a></b>,
-                    <b><a href="https://adobe.com/photoshop">Photoshop</a></b> and
-                    <b><a href="https://adobe.com/indesign">InDesign</a></b>, and programming in
-                    <b><a href="https://learn.microsoft.com/dotnet/csharp/">C#</a></b>.
-                </p>
-                <p class="m-2">Our lectures also encompass comprehensive courses in
-                    <b><a href="https://www.office.com/">Microsoft Office</a></b>,
-                    <b><a href="https://web.dev/">web development</a></b>,
-                    <b><a href="https://www.cisco.com/">Cisco</a></b> Networking Academy, and
-                    <b><a href="https://apex.oracle.com/">Apex SQL</a></b> databases.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="gallery" class="w-full min-h-svh">
-        <h1 class="font-semibold text-3xl text-center mt-16">Photos?</h1>
-        <div class="flex justify-center items-center">
-            <div
-                class="grid grid-cols-1 grid-rows-auto gap-6 w-4/5 grid-flow-row-dense my-24 md:grid-cols-2 lg:grid-cols-3">
-                <img class="row-span-6 object-cover bg-[#8a897b]" src="img/compressed/img_1.webp"
-                    alt="candle with tower in background">
-                <img class="row-span-3 object-cover bg-[#938682]" src="img/compressed/img_2.webp" alt="Broumov castle">
-                <img class="row-span-8 object-cover bg-[#6f7987]" src="img/compressed/img_3.webp"
-                    alt="Switzerland cathedral">
-                <img class="row-span-5 object-cover bg-[#897752] lg:col-start-1" src="img/compressed/img_4.webp"
-                    alt="Poděbrady avenue">
-                <img class="row-span-8 object-cover bg-[#a4abb0]" src="img/compressed/img_5.webp" alt="brick building">
-                <img class="row-span-3 object-cover bg-[#73715b]" src="img/compressed/img_6.webp"
-                    alt="Broumov industry building">
-            </div>
-        </div>
-    </div>
 
-    <footer id="footer" class="bg-secondary w-full mt-16 p-8 flex grow justify-start sm:justify-center">
-
-        <div class="flex justify-center flex-col content-center gap-16 m-16 sm:flex-row">
-            <div class="flex flex-col self-top">
-                <div class="flex flex-row content-center">
-                    <i class="fa-regular fa-address-card mr-2 mt-1.5 ml-1"></i>
-                    <p class="text-primary">Contact info</p>
+    <div>
+        <div id="about" class="bg-secondary50 h-fit w-fit p-16 mx-auto rounded-3xl">
+            <div class="max-w-xl py-8 md:max-w-3xl md:pl-12 md:py-16 lg:max-w-5xl lg:pl-36">
+                <h2 class="text-3xl font-semibold my-6 whitespace-nowrap">About me</h2>
+                <div class="leading-snug tracking-wide space-y-3">
+                    <p>Hi, my name is Jan Zadrobílek, and Iam a student from Pardubice, Czech republic at high
+                        school Delta.
+                    </p>
+                    <p>I'm all about learning new things and pushing boundaries. Whether that's starting yet
+                        another project or creating some visuals, I'm always up for the the challenge.</p>
+                    <p>So feel free to explore my portfolio.</p>
+                    <p>If you have any additional questions, or feedback, please
+                        <a href="#footer">contact me</a>.
+                    </p>
                 </div>
-                <div class="flex flex-row">
-                    <div class="w-0.5 bg-gradient-to-b from-accent to-transparent mx-2"></div>
-                    <div class="flex flex-col">
-                        <a href="https://www.facebook.com/">Facebook</a>
-                        <a href="https://www.instagram.com/j.zadrobilek/">Instagram</a>
-                        <a href="https://www.twitter.com/">Twitter</a>
-                        <a href="https://mail.google.com/mail/?fs=1&to=zadrobilek.jan@seznam.cz&tf=cm">Email</a>
-                        <button
-                            onclick="navigator.clipboard.writeText('+420 123 456 789'), document.getElementById('phoneNr').classList.add('animate-popup'), 
-                            setTimeout(() => {document.getElementById('phoneNr').classList.remove('animate-popup')}, 5000);">Telephone</button>
+            </div>
+        </div>
+
+        <div id="student" class="bg-primary50 h-fit w-fit p-16 mx-auto rounded-3xl my-24">
+            <div class="max-w-xl py-8 md:max-w-3xl md:pl-12 md:py-16 lg:max-w-5xl lg:pl-36">
+                <h2 class="text-3xl font-semibold my-6 whitespace-nowrap">Student</h2>
+                <div class="leading-snug tracking-wide space-y-3">
+                    <p>I'm currently in my second year at <a class="font-medium"
+                            href="https://www.delta-skola.cz/">Delta</a>,
+                        Computer Graphics and
+                        Programming School, with two more years ahead of me.</p>
+                    <p>Here, I am learning digital photography in both theory and with real-life
+                        experiences,
+                        graphics design in all sorts of mostly
+                        <a class="font-medium" href="https://www.adobe.com/">Adobe</a> products, including, but not
+                        limited to
+                        <a class="font-medium" href="https://adobe.com/illustrator">Illustrator</a>,
+                        <a class="font-medium" href="https://adobe.com/photoshop">Photoshop</a> and
+                        <a class="font-medium" href="https://adobe.com/indesign">InDesign</a>, and programming in
+                        <a class="font-medium" href="https://learn.microsoft.com/dotnet/csharp/">C#</a>.
+                    </p>
+                    <p>Our lectures also encompass comprehensive courses in
+                        <a class="font-medium" href="https://www.office.com/">Microsoft Office</a>,
+                        <a class="font-medium" href="https://web.dev/">web development</a>,
+                        <a class="font-medium" href="https://www.cisco.com/">Cisco</a> Networking Academy, and
+                        <a class="font-medium" href="https://apex.oracle.com/">Apex SQL</a> databases.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="programmer" class="bg-secondary50 h-fit w-fit p-16 mx-auto rounded-3xl my-24">
+            <div class="max-w-xl py-8 md:max-w-3xl md:pl-12 md:py-16 lg:max-w-5xl lg:pl-36">
+                <h2 class="text-3xl font-semibold my-6 whitespace-nowrap">Programmer</h2>
+                <div class="leading-snug tracking-wide space-y-3">
+                    <p>The programming language I started with is
+                        <a class="font-medium" href="https://learn.microsoft.com/dotnet/csharp/">C#</a>.
+                        With two years of learning, it is the language, where I have the most experience.
+                    </p>
+                    <p>Alongside to that I have knowledge of other languages, such as
+                        <a class="font-medium" href="https://www.python.org/">Python</a>,
+                        <a class="font-medium" href="https://www.java.com/">Java</a>,
+                        <a class="font-medium" href="https://www.javascript.com/">JavaScript</a>, and
+                        <a class="font-medium" href="https://apex.oracle.com/">SQL</a>.
+                    </p>
+                    <p>But I also have a comprehensive ability to use
+                        <a class="font-medium" href="https://google.com/">Google</a> and
+                        <a class="font-medium" href="https://chat.openai.com/">Chat Gpt</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="graphic" class="bg-primary50 h-fit w-fit p-16 mx-auto rounded-3xl my-24">
+            <div class="max-w-xl py-8 md:max-w-3xl md:pl-12 md:py-16 lg:max-w-5xl lg:pl-36">
+                <h2 class="text-3xl font-semibold my-6 whitespace-nowrap">Graphic</h2>
+                <div class="leading-snug tracking-wide space-y-3">
+                    <p>I have a passion for graphic design, whether it involves photography, digital art, or editing
+                        photos.
+                    </p>
+                    <p>In our lectures we learn how to work with 
+                        <a class="font-medium" href="https://www.adobe.com/">Adobe</a> 
+                        Creative Cloud products, like 
+                        <a class="font-medium" href="https://adobe.com/photoshop">Photoshop</a>, 
+                        <a class="font-medium" href="https://adobe.com/illustrator">Illustrator</a>,
+                        <a class="font-medium" href="https://adobe.com/indesign">InDesign</a>, 
+                        <a class="font-medium" href="https://adobe.com/xd">XD</a>, and
+                        <a class="font-medium" href="https://www.adobe.com/products/premiere">Premiere</a>.
+                    </p>
+                    <p>We also have real life courses such as our trip to 
+                        <a class="font-medium" href="https://maps.app.goo.gl/byTXbNbZdiAWf1Ds8">Broumov</a>  
+                        in summer of 2023, where we had
+                        seminars on proper camera operation, and had opportunities to photograph its beautiful scenery.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery" class="w-full min-h-svh">
+            <h1 class="font-semibold text-3xl text-center mt-16">Photos?</h1>
+            <div class="flex justify-center items-center">
+                <div
+                    class="grid grid-cols-1 grid-rows-auto gap-6 w-4/5 grid-flow-row-dense my-24 md:grid-cols-2 lg:grid-cols-3">
+                    <img class="row-span-6 object-cover bg-[#8a897b]" src="img/compressed/img_1.webp"
+                        alt="candle with tower in background">
+                    <img class="row-span-3 object-cover bg-[#938682]" src="img/compressed/img_2.webp"
+                        alt="Broumov castle">
+                    <img class="row-span-8 object-cover bg-[#6f7987]" src="img/compressed/img_3.webp"
+                        alt="Switzerland cathedral">
+                    <img class="row-span-5 object-cover bg-[#897752] lg:col-start-1" src="img/compressed/img_4.webp"
+                        alt="Poděbrady avenue">
+                    <img class="row-span-8 object-cover bg-[#a4abb0]" src="img/compressed/img_5.webp"
+                        alt="brick building">
+                    <img class="row-span-3 object-cover bg-[#73715b]" src="img/compressed/img_6.webp"
+                        alt="Broumov industry building">
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer" class="bg-secondary w-full mt-16 p-8 flex grow justify-start sm:justify-center">
+
+            <div class="flex justify-center flex-col content-center gap-16 m-16 sm:flex-row">
+                <div class="flex flex-col self-top">
+                    <div class="flex flex-row content-center">
+                        <i class="fa-regular fa-address-card mr-2 mt-1.5 ml-1"></i>
+                        <p class="text-primary">Contact info</p>
+                    </div>
+                    <div class="flex flex-row">
+                        <div class="w-0.5 bg-gradient-to-b from-accent to-transparent mx-2"></div>
+                        <div class="flex flex-col">
+                            <a href="https://www.facebook.com/">Facebook</a>
+                            <a href="https://www.instagram.com/j.zadrobilek/">Instagram</a>
+                            <a href="https://www.twitter.com/">Twitter</a>
+                            <a href="https://mail.google.com/mail/?fs=1&to=zadrobilek.jan@seznam.cz&tf=cm">Email</a>
+                            <button
+                                onclick="navigator.clipboard.writeText('+420 123 456 789'), makeAnimation()">Telephone</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col self-top">
+                    <div class="flex flex-row content-center">
+                        <i class="fa-solid fa-question mr-2 mt-1.5 ml-1"></i>
+                        <p class="text-primary">Resources used</p>
+                    </div>
+                    <div class="flex flex-row">
+                        <div class="w-0.5 bg-gradient-to-b from-accent to-transparent mx-2"></div>
+                        <div class="flex flex-col">
+                            <a href="https://www.tailwindcss.com/">Tailwind</a>
+                            <a href="https://www.fonts.google.com/">Google fonts</a>
+                            <a href="https://www.fontawesome.com/">Font awesome</a>
+                            <a href="https://www.realtimecolors.com/">Realtime colors</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col self-top">
+                    <div class="flex flex-row content-center">
+                        <i class="fa-solid fa-question mr-2 mt-1.5 ml-1"></i>
+                        <p class="text-primary">Navigation</p>
+                    </div>
+                    <div class="flex flex-row">
+                        <div class="w-0.5 bg-gradient-to-b from-accent to-transparent mx-2"></div>
+                        <div class="flex flex-col">
+                            <a href="#welcome">Welcome</a>
+                            <a href="#about">About me</a>
+                            <a href="#gallery">Gallery</a>
+                            <a href="#footer">Footer</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="flex flex-col self-top">
-                <div class="flex flex-row content-center">
-                    <i class="fa-solid fa-question mr-2 mt-1.5 ml-1"></i>
-                    <p class="text-primary">Resources used</p>
-                </div>
-                <div class="flex flex-row">
-                    <div class="w-0.5 bg-gradient-to-b from-accent to-transparent mx-2"></div>
-                    <div class="flex flex-col">
-                        <a href="https://www.tailwindcss.com/">Tailwind</a>
-                        <a href="https://www.fonts.google.com/">Google fonts</a>
-                        <a href="https://www.fontawesome.com/">Font awesome</a>
-                        <a href="https://www.realtimecolors.com/">Realtime colors</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col self-top">
-                <div class="flex flex-row content-center">
-                    <i class="fa-solid fa-question mr-2 mt-1.5 ml-1"></i>
-                    <p class="text-primary">Navigation</p>
-                </div>
-                <div class="flex flex-row">
-                    <div class="w-0.5 bg-gradient-to-b from-accent to-transparent mx-2"></div>
-                    <div class="flex flex-col">
-                        <a href="#welcome">Welcome</a>
-                        <a href="#about">About me</a>
-                        <a href="#gallery">Gallery</a>
-                        <a href="#footer">Footer</a>
-                    </div>
-                </div>
-            </div>
+            <i class="absolute flex right-8 self-end font-light">Designed by Jan Zadrobílek</i>
+        </footer>
+        <div id="phoneNr"
+            class="opacity-0 text-background bg-primary rounded-xl bottom-0 fixed m-8 px-4 py-1 text-center onclick">
+            <span><i class="fa-solid fa-circle-info pr-2"></i>Phone number copied to clipboard.</span>
         </div>
-        <i class="absolute flex right-8 self-end font-light">Designed by Jan Zadrobílek</i>
-    </footer>
-    <div id="phoneNr" class="opacity-0 text-background bg-primary rounded-xl bottom-0 fixed m-8 px-4 py-1 text-center">
-        <span><i class="fa-solid fa-circle-info pr-2"></i>Phone number copied to clipboard.</span>
-    </div>
 </body>
 
 </html>

@@ -1,13 +1,12 @@
 window.location.replace("#welcome");
 
-/*window.addEventListener("load", (event) => {
-    const gallery = document.querySelector("#Gallery > div > div").querySelectorAll("img")
+function makeAnimation() {
+    const toAnimate = document.getElementById('phoneNr');
+    if (toAnimate.classList.contains('animate-popup'))
+        toAnimate.classList.remove('animate-popup');
+    toAnimate.classList.add('animate-popup');
+    setTimeout(() => {
+        toAnimate.classList.remove('animate-popup');
+    }, 5000);     
 
-    gallery.forEach(image => {
-        const path = image.getAttribute("src").split('/');
-        if (path.length == 3) {
-            path[1] = "full_rez"
-            image.src = path.join('/');
-        }
-    });
-});*/
+}
