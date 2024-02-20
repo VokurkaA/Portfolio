@@ -1,4 +1,5 @@
-window.location.replace("#welcome");
+if (!window.location.href.includes('#'))
+    window.location.replace("#welcome");
 
 function makeAnimation() {
     const toAnimate = document.getElementById('phoneNr');
